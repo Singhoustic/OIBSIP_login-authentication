@@ -1,0 +1,126 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	background: linear-gradient(#eeaeca, #94bbe9);
+	font-family: "Poppins", sans-serif;
+}
+
+.main {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.registerBox {
+	background: radial-gradient(
+		circle,
+		rgb(152, 70, 106) 0%,
+		rgb(116, 154, 197) 100%
+	);
+	border-radius: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px 300px;
+}
+.registerForm {
+	border: 2px solid white;
+	border-radius: 20px;
+	background-color: white;
+	padding: 50px;
+}
+
+.registerForm h1 {
+	font-size: 100px;
+}
+.form > input {
+	border: none;
+	border-bottom: 2px solid black;
+	padding: 10px;
+	margin: 10px;
+}
+.form {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+.registerForm > button {
+	padding: 10px 25px;
+	border-radius: 20px;
+	border: 2px solid black;
+	text-transform: uppercase;
+	text-decoration: none;
+	margin-right: 20px;
+}
+#registerButton {
+	background-color: black;
+	color: white;
+}
+#registerButton:hover {
+	background-color: white;
+	color: #000;
+}
+#backToLoginButton {
+	background-color: white;
+	color: #000;
+}
+#backToLoginButton:hover {
+	background-color: #000;
+	color: white;
+}
+
+#logoutButton {
+	background-color: black;
+	color: white;
+	font-weight: 700;
+}
+#logoutButton:hover {
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+}
+
+@media screen and (max-width: 425px) {
+	.registerBox {
+		height: 0%;
+		width: 100%;
+		padding: 0;
+	}
+
+	.registerForm > button {
+		width: 100%;
+		margin: 5px;
+	}
+	.registerForm h1 {
+		font-size: 50px;
+	}
+	.form > input {
+		width: 100%;
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.registerForm {
+		padding: 25px;
+	}
+
+	/* .registerBox {
+		padding: 30px 40px;
+	} */
+	.form > input {
+		padding: 10px;
+		margin: 4px;
+	}
+}
+
+@media screen and (max-width: 816px) {
+	.registerBox {
+		padding: 40px 80px;
+	}
+}
