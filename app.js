@@ -8,8 +8,8 @@ var indexRouter = require('./routes/indexRouter');
 var usersRouter = require('./routes/userRouter');
 
 const mongoose = require('mongoose');
-mongoose.connect("mongodb://127.0.0.1:27017/login-authentication");
-
+// mongoose.connect("mongodb://127.0.0.1:27017/login-authentication");
+mongoose.connect("mongodb+srv://singhoustic:iamrohit1@login-cluster.l49otgc.mongodb.net/");
 var app = express();
 
 // view engine setup

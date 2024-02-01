@@ -37,7 +37,7 @@ body {
 }
 
 .registerForm h1 {
-	font-size: 100px;
+	font-size: 80px;
 }
 .form > input {
 	border: none;
@@ -87,9 +87,7 @@ body {
 
 @media screen and (max-width: 425px) {
 	.registerBox {
-		height: 0%;
-		width: 100%;
-		padding: 0;
+		padding: 0px;
 	}
 
 	.registerForm > button {
@@ -103,19 +101,25 @@ body {
 		width: 100%;
 		margin: 10px;
 	}
+	.registerForm h1 {
+		font-size: 30px;
+	}
 }
 
 @media screen and (max-width: 640px) {
+	.registerBox {
+		padding: 60px 30px;
+	}
+
 	.registerForm {
 		padding: 25px;
 	}
-
-	/* .registerBox {
-		padding: 30px 40px;
-	} */
 	.form > input {
 		padding: 10px;
 		margin: 4px;
+	}
+	.registerForm h1 {
+		font-size: 50px;
 	}
 }
 
