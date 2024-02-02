@@ -89,6 +89,9 @@ body {
 	.registerBox {
 		padding: 0px;
 	}
+	.registerForm {
+		border-radius: 0;
+	}
 	.registerForm > button {
 		width: 100%;
 		margin: 5px;
@@ -97,33 +100,39 @@ body {
 		font-size: 50px;
 	}
 	.form > input {
-		width: 100%;
+		width: 95%;
 		margin: 10px;
-	}
-	.registerForm h1 {
-		font-size: 30px;
 	}
 }
 
-@media (min-width: 425px) and (max-width: 640px) {
+@media (min-width: 426px) and (max-width: 672px) {
 	.registerBox {
 		padding: 60px 30px;
 	}
 
 	.registerForm {
-		padding: 25px;
+		padding: 50px;
 	}
 	.form > input {
 		padding: 10px;
 		margin: 4px;
+		width: 100%;
 	}
 	.registerForm h1 {
 		font-size: 50px;
 	}
+	.registerForm > button {
+		margin: 0;
+	}
 }
 
-@media (min-width: 641px) and (max-width: 816px) {
+@media (min-width: 672px) and (max-width: 816px) {
 	.registerBox {
-		padding: 40px 80px;
+		padding: 40px 100px;
+	}
+}
+@media (min-width: 816px) and (max-width: 1024px) {
+	.registerBox {
+		padding: 40px 150px;
 	}
 }
