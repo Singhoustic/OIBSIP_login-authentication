@@ -109,14 +109,14 @@ body {
 	}
 	.form > input {
 		margin: 0 0 10px 0;
-		width: 100%;
+		width: 80%;
 	}
 	.signinData > button {
 		width: 80%;
 	}
 }
 
-@media screen and (max-width: 640px) {
+@media (min-width: 425px) and (max-width: 640px) {
 	.main {
 		height: 100vh;
 	}
@@ -141,13 +141,14 @@ body {
 	}
 	.form > input {
 		margin: 0 0 10px 0;
+		width: 100%;
 	}
 	.signinData > button {
 		width: 100%;
 	}
 }
 
-@media screen and (max-width: 816px) {
+@media (min-width: 640px) and (max-width: 816px) {
 	.box {
 		margin: 20px 40px;
 		padding: 20px;
@@ -170,7 +171,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 816px) and (max-width: 1024px) {
 	.form > input {
 		width: 100%;
 	}
