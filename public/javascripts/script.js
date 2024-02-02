@@ -83,7 +83,10 @@ signin?.addEventListener('click', () => {
 })
 
 //Logout Section
-logout?.addEventListener('click', () => {
+logout?.addEventListener('click', async () => {
     const conf = confirm("Do you want to log Out?");
-    if (conf) window.location.href = '/';
+    if (conf) {
+        await fetch("/api/logout");
+        window.location.href = '/';
+    }
 })

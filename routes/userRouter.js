@@ -5,6 +5,11 @@ const bcrypt = require('bcrypt');
 const user = require('../model/user');
 
 
+const cookieOptions = {
+    secure: false,
+    httpOnly: true
+};
+
 //Register Page Route
 router.post('/register', async function (req, res) {
     try {
@@ -24,6 +29,14 @@ router.post('/register', async function (req, res) {
     }
 })
 
+router.get('/logout', async (req, res) => {
+    res.cookie("userId", "", cookieOptions);
+    res.json({
+        status: "success",
+        message: "Logged out successfully!"
+    })
+})
+
 
 // Home Page Route
 router.post('/home', async function (req, res) {
@@ -38,10 +51,10 @@ router.post('/home', async function (req, res) {
         if (data) {
             bcrypt.compare(signinUser.loginPassword, data.password, function (err, result) {
                 if (result) {
-                    req.user = data;
+                    res.cookie("userId", data?._doc?._id, cookieOptions);
                     res.json({
                         status: "success",
-                        message: "login Successful",
+                        message: "login Successful"
                     })
                 } else {
                     res.json({

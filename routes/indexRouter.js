@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const userModel = require("../model/user");
+const User = require("../model/user");
 
 
 /* GET home page. */
@@ -15,9 +15,12 @@ router.get('/register', function (req, res) {
 
 /* GET Dashboard page. */
 router.get('/dashboard', async function (req, res) {
-  const currentLoggedInUser = req.user;
-  console.log("req.user: ", currentLoggedInUser)
-  res.render('dashboard', { User: 'There!' });
+  if (req.cookies.userId) {
+    const currentLoggedInUser = await User.findById(req.cookies.userId);
+    res.render('dashboard', currentLoggedInUser);
+  } else {
+    res.redirect("/")
+  }
 })
 
 module.exports = router;
